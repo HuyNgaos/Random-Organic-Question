@@ -2,5 +2,6 @@
     "acetic acid":       "CC(=O)O",
     "benzoic acid":      "c1ccccc1C(=O)O",
     "propionic acid":    "CCC(=O)O",
-    "butyric acid":      "CCCC(=O)O"
+    "butyric acid":      "CCCC(=O)O",
+    "oleic acid":        "CCCCCCCC\C=C/CCCCCCCC(=O)O"
 }
