@@ -1,0 +1,8 @@
+{
+    "methyl acetate":       "CC(=O)OC",
+    "ethyl acetate":        "CC(=O)OCC",
+    "methyl propionate":    "CCC(=O)OC",
+    "isopropyl acetate":    "CC(=O)OC(C)C",
+    "ethyl benzoate":       "O=C(OCC)c1ccccc1",
+    "methyl salicylate":    "COC(=O)c1ccccc1O"
+}

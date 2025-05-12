@@ -1,0 +1,14 @@
+{
+  "Esterification": {
+    "smarts": "[C:1](=[O:2])[O:3].[C:4][O:5]>>[C:1](=[O:2])[O:5][C:4].[O:3]",
+    "catalyst": "OS(=O)(=O)O"
+  },
+  "Ester_hydrolysis": {
+    "smarts": "[C:1](=[O:2])[O:3][C:4].[O:5]>>[C:1](=[O:2])[O:5].[C:4][O:3]",
+    "catalyst": "OS(=O)(=O)O"
+  },
+  "AcylHalideEsterification": {
+    "smarts": "[C:1](=[O:2])[Cl,Br,I:3].[O:4][C:5]>>[C:1](=[O:2])[O:4][C:5].[Cl,Br,I:3]",
+    "catalyst": None
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "methanol":     "CO",
+    "ethanol":      "CCO",
+    "propanol":     "CCCO",
+    "butanol":      "CCCCO"
+}
