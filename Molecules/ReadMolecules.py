@@ -37,3 +37,13 @@ class Ester(Get_smiles):
             # parses the literal dict safely
             molecules = ast.literal_eval(txt)
         return molecules
+
+class AcylHalide(Get_smiles):
+    def get(self, txt_path = "AcylHalide.txt"):
+        # Load the acyl halides from the text file
+        fullpath = os.path.join(self.here, txt_path)
+        with open(fullpath, 'r') as f:
+            txt = f.read()
+            # parses the literal dict safely
+            molecules = ast.literal_eval(txt)
+        return molecules

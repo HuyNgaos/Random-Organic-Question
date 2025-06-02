@@ -17,10 +17,16 @@ class Question_gen:
                 molecules = RM.Carboxylic_acid().get()
             case "Ester":
                 molecules = RM.Ester().get()
+            case "AcylHalide":
+                molecules = RM.AcylHalide().get()
             case _:
                 raise ValueError("Invalid functional group")
         return molecules
-    
+
+"""
+The subclasses of Question_gen generate questions and answers for the flash card app
+for each type of reaction.
+"""
 class Esterfication(Question_gen):
     def __init__(self): # Read the correct molecules from the text file and set the reaction type
         # super().__init__(question_type)
@@ -63,8 +69,36 @@ class Ester_hydrolysis(Question_gen):
         # Return the question and the reaction (including the product)
         return question, rxn
     
+class AcylHalideEsterification(Question_gen):
+    def __init__(self): # Read the correct molecules from the text file and set the reaction type
+        # super().__init__(question_type)
+        self.AcylHalide = self.read_molecules("AcylHalide")
+        self.Alcohol = self.read_molecules("Alcohol")
+        self.reaction = "AcylHalideEsterification"
+
+    def generate_question(self):
+        # Generate a random acyl halide and alcohol
+        acyl_halide_name, acyl_halide_smiles = random.choice(list(self.AcylHalide.items()))
+        alcohol_name, alcohol_smiles = random.choice(list(self.Alcohol.items()))
+        # Generate the the reactants list and reaction
+        reactants = [
+            Chem.MolFromSmiles(acyl_halide_smiles),
+            Chem.MolFromSmiles(alcohol_smiles)
+        ]
+        rxn = chemical_reactions.Make_reaction(self.reaction, reactants)
+        # Generate the question
+        question = f"What is the product of the reaction between {acyl_halide_name} and {alcohol_name}?"
+        # Return the question and the reaction (including the product)
+        return question, rxn
+    
+# class Wittig_reaction(Question_gen):
+#     def __init__(self): # Read the correct molecules from the text file and set the reaction type
+#         self.AlkylHalide = self.read_molecules("AlkylHalide")
+#         self.Ketone = self.read_molecules("Ketone")
+#         self.Aldehyde = self.read_molecules("Aldehyde")
+#         self.carbonyl = 
 # def test():
-#     question_gen = Ester_hydrolysis()
+#     question_gen = Esterfication()
 #     question, answer = question_gen.generate_question()
 #     print(question)
 #     print(Chem.MolToSmiles(answer.products[0][0]))

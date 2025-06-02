@@ -1,0 +1,14 @@
+{
+    "formyl chloride":      "O=CCl",
+    "formyl bromide":       "O=CBr",
+    "acetyl chloride":      "CC(=O)Cl",
+    "acetyl bromide":       "CC(=O)Br",
+    "propionyl chloride":   "CCC(=O)Cl",
+    "propionyl bromide":    "CCC(=O)Br",
+    "butanoyl chloride":    "CCCC(=O)Cl",
+    "butanoyl bromide":     "CCCC(=O)Br",
+    "benzoyl chloride":     "c1ccccc1C(=O)Cl",
+    "benzoyl bromide":      "c1ccccc1C(=O)Br",
+    "isobutyryl chloride":  "CC(C)C(=O)Cl",
+    "isobutyryl bromide":   "CC(C)C(=O)Br"
+}

@@ -10,5 +10,9 @@
   "AcylHalideEsterification": {
     "smarts": "[C:1](=[O:2])[Cl,Br,I:3].[O:4][C:5]>>[C:1](=[O:2])[O:4][C:5].[Cl,Br,I:3]",
     "catalyst": None
+  },
+  "Wittig_ylide": {
+    "smarts": "[C:1][Cl,Br,I:2].[P:3](c1ccccc1)(c1ccccc1)(c1ccccc1)>>[C:1]=[P:3](c1ccccc1)(c1ccccc1)(c1ccccc1)",
+    "catalyst": "[Na][H]"
   }
 }

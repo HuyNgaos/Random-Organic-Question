@@ -1,0 +1,7 @@
+{
+    "acetone": "CC(=O)C",
+    "butanone": "CCC(=O)C",
+    "pentan-2-one": "CCCC(=O)C",
+    "cyclohexanone": "C1CCCCC1=O",
+    "benzophenone": "C1=CC=C(C=C1)C(=O)C2=CC=CC=C2"
+}

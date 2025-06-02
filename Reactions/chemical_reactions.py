@@ -66,6 +66,27 @@ class Make_reaction():
         else:
             print("No products found for the given reactants.")
 
+    def img_get(self):
+        """Visualize the reaction"""
+        if self.products:
+            # Draw the reactants and products
+            rxn = rdChemReactions.ChemicalReaction()
+            for reactant in self.reactants:
+                rxn.AddReactantTemplate(reactant)
+            for product_set in self.products:
+                for product in product_set:
+                    rxn.AddProductTemplate(product)
+            # Draw catalyst
+            if self.catalyst:
+                catalyst_mol = Chem.MolFromSmiles(self.catalyst)
+                rxn.AddAgentTemplate(catalyst_mol)
+            img = Draw.ReactionToImage(rxn, subImgSize=(200, 200))
+            return img
+        else:
+            print("No products found for the given reactants.")
+            return None
+
+
 # reactants = [
 #     Chem.MolFromSmiles("CC(=O)OC")
 #     , Chem.MolFromSmiles("O")
